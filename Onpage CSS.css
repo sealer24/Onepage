@@ -1,0 +1,21 @@
+#banner {
+    height: 10em;
+    width: 100%;
+}
+.background{
+background-attachment: fixed;
+background-position: right top;
+background-repeat: no-repeat;
+background-size: cover;
+box-sizing: border-box;
+color: rgb(51, 51, 51);
+height: 478.4px;
+line-height: 24px;
+max-height: 1200px;
+overflow-wrap: break-word;
+position: relative
+}
+.tekst {
+    background-color: white;
+    
+}
