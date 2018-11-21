@@ -2,20 +2,40 @@
     height: 10em;
     width: 100%;
 }
-.background{
-background-attachment: fixed;
-background-position: right top;
-background-repeat: no-repeat;
-background-size: cover;
-box-sizing: border-box;
-color: rgb(51, 51, 51);
-height: 478.4px;
-line-height: 24px;
-max-height: 1200px;
-overflow-wrap: break-word;
-position: relative
+@media screen and (max-width: 500px){
+#billede-et {
+    height: 10%
+    }
+}
+
+@media screen and (min-width: 500px) {
+    
+}
+
+@media screen and (min-width: 800px) {
+    .background{
+    background-attachment: fixed;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    height: 478.4px;
+    max-height: 1200px;
+    overflow-wrap: break-word;
+    position: relative
+    }
 }
 .tekst {
-    background-color: white;
-    
+    background-color: black;
+    padding-left: 20em;
+    padding-right: 20em;
+    color: silver;
+}
+
+.tekst-border {
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 0.3em;
+    border-color: rgb(102, 62, 35); 
 }
