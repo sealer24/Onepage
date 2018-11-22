@@ -82,15 +82,23 @@ body{
     max-height: 200px;
 }
 #fuld {
-    transition: transform 300ms ease-in-out 1ms
+    transition: transform 800ms ease-in-out 1ms
 }
-#fuld:hover {
-    transform: translate(200px, 150px)rotate(90deg); 
+.knap{
+    height:200px;
+    width:200px;
+    border: 20px solid;
+    background-color: rgb(102, 62, 35);
+    grid-area: knap;
+    z-index:
+}
+.knap:hover #fuld {
+    transform: translate(100px, 50px)rotate(90deg); 
 }
 
 #navlogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:;
+    width:auto;
 }
