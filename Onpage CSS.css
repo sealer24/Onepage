@@ -82,7 +82,11 @@ body{
     max-height: 200px;
 }
 #fuld {
-    transition: transform 800ms ease-in-out 1ms
+    animation: roter 2s ease-in-out 0s infinite
+}
+@keyframes roter{
+    from {transform: translate(0px, 0px);}
+    to {transform: translate(100px, 50px)rotate(90deg);}
 }
 .knap{
     height:200px;
