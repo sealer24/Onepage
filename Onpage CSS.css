@@ -1,29 +1,72 @@
+@font-face{
+    font-family: 'book antiqua i';
+    src: url('font/ANTQUAI.TTF') format('truetype');
+}
+
+@font-face{
+    font-family: 'baskerville old face';
+    src: url('font/BASKVILL.TTF') format('truetype');
+}
 body{
-    background-color: black
+    background-color: black; 
 }
-
-@media screen and (min-width: 500px) {
-    
-}
-
-@media screen and (min-width: 800px) {
-    .background{
-    background-attachment: fixed;
-    background-position: right top;
+.background{
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     box-sizing: border-box;
-    color: rgb(51, 51, 51);
-    height: 600px;
+    color: black;
+    height: 200px;
     max-height: 1900px;
+    width: 100%;
     overflow-wrap: break-word;
-    position: relative
-    }
+    position: relative;
+}
+
+
+#overskrift1 {
+    background-color: black;
+    color: silver;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'baskerville old face';
+    grid-area: overskrift1;
+    margin: 0px;
+    margin-top: 1px
+}
+#navlogo {
+    width: 100%;
+    height: 100px;
+    background-image: url(Billeder/poduim.jpg);
+    background-size: 100% 100%;
+}
+#plug {
+    width: 100%;
+    height: 100px;
+    background-size: 100% 100%;
+    grid-area: plug;
+    display: none
+}
+#play {
+    width: 100%;
+    height: 100px;
+    background-size: 100% 100%;
+    grid-area: play;
+    display: none
 }
 
 .tekst {
     background-color: black;
     color: silver;
+    font-family: 'book antiqua i';
+}
+
+#tekstnav {
+    background-color: black;
+    color: silver;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'book antiqua i';
+    border-bottom: 5px solid #d9a387;
 }
 
 #tekst1 {
@@ -33,8 +76,10 @@ body{
 #grid1{
     display: grid;
     grid-auto-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-        ". tekst1 ."
+        ". overskrift1 ."
+        "plug tekst1 play"
         
 }
 #tekst2 {
@@ -44,8 +89,10 @@ body{
 #grid2{
     display: grid;
     grid-auto-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-        ". tekst2 ."
+        ". overskrift1 ." 
+        "plug tekst2 play"
         
 }
 #tekst3 {
@@ -55,9 +102,10 @@ body{
 #grid3{
     display: grid;
     grid-auto-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-        ". tekst3 ."
-        
+        ". overskrift1 ." 
+        "plug tekst3 play"      
 }
 #tekst4 {
     grid-area: tekst4;
@@ -66,16 +114,17 @@ body{
 #grid4{
     display: grid;
     grid-auto-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-        ". tekst4 ."
-        
+        ". overskrift1 ." 
+        "plug tekst4 play"    
 }
 
 .tekst-border {
     border-top: solid;
     border-bottom: solid;
-    border-width: 0.3em;
-    border-color: rgb(102, 62, 35); 
+    border-width: 5px;
+    border-color: #d9a387; 
 }
 
 .animation {
@@ -88,21 +137,42 @@ body{
     from {transform: translate(0px, 0px);}
     to {transform: translate(100px, 50px)rotate(90deg);}
 }
-.knap{
-    height:200px;
-    width:200px;
-    border: 20px solid;
-    background-color: rgb(102, 62, 35);
-    grid-area: knap;
-    z-index:
-}
-.knap:hover #fuld {
-    transform: translate(100px, 50px)rotate(90deg); 
+@media screen and (min-width: 500px) {
+    
 }
 
-#navlogo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:auto;
+@media screen and (min-width: 800px) {
+    .background{
+        background-attachment: fixed;
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        box-sizing: border-box;
+        color: black;
+        height: 600px;
+        max-height: 1900px;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: relative;
+    }
+   #navlogo {
+        width: 100%;
+        height: 200px;
+        background-image: url(Billeder/poduim.jpg);
+        background-size: 100% 100%
+    }
+    #plug {
+        width: 100%;
+        height: 100px;
+        background-size: 100% 100%;
+        grid-area: plug;
+        display: block
+    }
+    #play {
+        width: 100%;
+        height: 100px;
+        background-size: 100% 100%;
+        grid-area: play;
+        display: block
+    }
 }
