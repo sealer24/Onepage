@@ -67,6 +67,7 @@ body{
     font-size: 2em;
     font-family: 'book antiqua i';
     border-bottom: 5px solid #d9a387;
+    grid-area: navtekst;
 }
 
 #tekst1 {
@@ -157,9 +158,18 @@ body{
     }
    #navlogo {
         width: 100%;
-        height: 200px;
+        height: 300px;
         background-image: url(Billeder/poduim.jpg);
-        background-size: 100% 100%
+        background-size: 100% 100%;
+        grid-area: logo;
+    }
+    header {
+        display: grid;
+        grid-auto-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            ". logo ." 
+            "navtekst navtekst navtekst"
     }
     #plug {
         width: 100%;
